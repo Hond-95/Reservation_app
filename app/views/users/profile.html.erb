@@ -1,0 +1,64 @@
+<%= stylesheet_link_tag 'users' %>
+
+<div class="container device">
+  <div class="row">
+    <div class="col-lg-2 user-nav user-nav-pc d-lg-block d-none">
+      <ul>
+        <li>
+          <a href="/users/account/<%=@user.id%>">アカウント</a>
+        </li>
+        <li class="active">
+          <a href="/users/profile/<%=@user.id%>">プロフィール</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-10 user-view">
+      <%= form_tag("/users/update/#{@user.id}", {multipart: true}) do %>
+        <div class="user-view-box">
+          <div class="update-content">
+            <div class="row">
+              <h5>プロフィール</h5>
+            </div>
+            <% @user.errors.full_messages.each do |message| %>
+              <div class="form-error">
+                <%= message %>
+              </div>
+            <% end %>
+          </div>
+          <div class="update-content">
+            <div class="row">
+              <div class="col-md-6 offset-md-3">
+                  <div class="icon-box">
+                    <img alt="アイコン画像" class="icon-image host-icon" src="/user_images/<%= @user.image%>">
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="update-content">
+            <div class="row">
+              <label class="col-md-3 required-a">アイコン画像</label>
+              <input name="image" type="file" class="mb-4 col-md-9">
+            </div>
+          </div>
+          <div class="update-content">
+            <div class="row">
+              <label class="col-md-3 required-a">名前</label>
+              <input name="name" type="text" class="form-control mb-4 col-md-9" value="<%= @user.name%>">
+            </div>
+          </div>
+          <div class="update-content">
+            <div class="row">
+              <label class="col-md-3">自己紹介</label>
+              <textarea name="profile" class="form-control mb-4 col-md-9"><%= @user.profile%></textarea>
+            </div>
+          </div>
+        　<div class="update-content">
+            <div class="row">
+              <input type="submit" value="更新" class="col-md-2 btn btn-primary mx-3">
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

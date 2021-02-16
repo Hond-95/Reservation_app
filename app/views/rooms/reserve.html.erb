@@ -1,0 +1,42 @@
+<%= stylesheet_link_tag 'reserve' %>
+
+<div class="container room-show">
+  <div class="row">
+    <div class="col-md-8">
+      <% if @rooms.room_image? %>
+        <%= image_tag(@rooms.room_image.url,class:'room-show-image',:size =>'320x480') %>
+      <% else %>
+        <%= image_tag('/images/default_room.jpg', class:'room-show-image', :size =>'320x480') %>
+      <% end %>
+      <div class="room-show-detail">
+        <div class="room-show-detail-icon">
+          <i class="far fa-user-circle"></i>
+        </div>
+        <div class="room-show-profile">
+          <p class="room-show-profile-name"><%= @rooms.name %></p>
+          <p class="room-show-profile-address"><%= @rooms.address %></p>
+        </div>
+      </div>
+      <p class="room-show-detail-content"><%= @rooms.introduction %></p>
+    </div>
+    <div class="col-md-4">
+      <div class="room-show-nav">
+        <h5 class="price-icon">¥<%= @rooms.fee %> / 日</h5>
+        <div class="room-show-date-select">
+          <%= form_with(url: "/reservation/confirm", method: :post, local: true) do |f| %>
+             <%= f.hidden_field :room_id, :value => @rooms.id %>
+             <%= f.hidden_field :fee, :value => @rooms.fee %>
+             <%= f.label :start_ymd, "開始日" %>
+             <%= f.date_field :start_ymd %>
+             <%= f.label :end_ymd, "終了日" %>
+             <%= f.date_field :end_ymd %>
+             <%= f.label :guests, "人数" %>
+             <%= f.number_field :guests , min:1 %>
+             <%= f.submit "予約する" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

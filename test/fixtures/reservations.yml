@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_ymd: 2021-02-08 11:47:47
+  end_ymd: 2021-02-08 11:47:47
+  guests: 1
+  total_amount: 1
+  user_id: 1
+  room_id: 1
+
+two:
+  start_ymd: 2021-02-08 11:47:47
+  end_ymd: 2021-02-08 11:47:47
+  guests: 1
+  total_amount: 1
+  user_id: 1
+  room_id: 1

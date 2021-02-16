@@ -1,0 +1,37 @@
+<%= stylesheet_link_tag 'rooms' %>
+
+<div class="container-fiuld room-posts">
+    <h4 class="pb-4">登録済みルーム一覧</h4>
+    <table>
+        <thead>
+            <tr align="center">
+                <th>ルーム画像</th>
+                <th>ルーム名</th>
+                <th>ルーム紹介</th>
+                <th>ルーム料金</th>
+                <th>作成日</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @rooms.each do |room| %>
+                <tr>
+                    <td>
+                        <a href="/rooms/<%= room.id %>">
+                            <% if room.room_image? %>
+                                <%= image_tag(room.room_image.url,class:'room-posts-image', :size =>'320x480') %>
+                            <% else %>
+                                <%= image_tag('/images/default_room.jpg', class:'room-posts-image', :size =>'320x480') %>
+                            <% end %>
+                        </a>
+                    </td>
+                    <td class="posts-name">
+                        <a href="/rooms/<%= room.id %>"><%= room.name %></a>
+                    </td>
+                    <td class="posts-content"><%= room.introduction %></td>
+                    <td class="price-icon"><%= room.fee %></td>
+                    <td><%= room.created_at.strftime("%Y年%m月%d日 %H時%M分") %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>

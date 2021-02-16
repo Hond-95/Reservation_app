@@ -1,0 +1,42 @@
+<%= stylesheet_link_tag 'users' %>
+
+<div class="container device">
+  <div class="row">
+    <div class="col-lg-2 user-nav user-nav-pc d-lg-block d-none">
+      <ul>
+        <li class="active">
+          <a href="/users/account/<%=@user.id%>">アカウント</a>
+        </li>
+        <li>
+          <a href="/users/profile/<%=@user.id%>">プロフィール</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-10 user-view">
+      <div class="user-view-box">
+        <div class="update-content">
+          <div class="row">
+            <h5>アカウント</h5>
+          </div>
+        </div>
+        <div class="update-content">
+          <div class="row">
+            <label class="col-md-3" for="email">メールアドレス </label>
+            <div class="col-md-9"><%= @user.email %></div>
+          </div>
+        </div>
+        <div class="update-content">
+          <div class="row">
+            <label class="col-md-3" for="password">パスワード</label>
+            <div class="col-md-9">*************</div>
+          </div>
+        </div>
+        <div class="update-content">
+          <div class="row">
+            <a class="col-md-2 btn btn-primary mx-3" href="/users/edit/<%= @user.id %>">編集</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

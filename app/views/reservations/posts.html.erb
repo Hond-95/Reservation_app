@@ -1,0 +1,36 @@
+<%= stylesheet_link_tag 'reservations' %>
+
+<div class="reservations-new user">
+    <div class="row">
+        <div class="col-md-12 user-view">
+            <div class="user-view-box">
+                <%= form_with(url: "/reservations/#{@reserve.id}", method: :get, local: true) do |f| %>
+                    <div class="update-content">
+                        <div class="row">
+                            <%= f.label :room_name, "予約した部屋", class: 'col-md-3' %>
+                            <div class="col-md-9"><%= @room.name%></div>
+                        </div>
+                    </div>
+                    <div class="update-content">
+                        <div class="row">
+                            <%= f.label :start_ymd, "開始日", class: 'col-md-3' %>
+                            <div class="col-md-9"><%= @reserve.start_ymd.strftime("%Y年%m月%d日") %></div>
+                        </div>
+                    </div>                    
+                    <div class="update-content">
+                        <div class="row">
+                            <%= f.label :end_ymd, "終了日", class: 'col-md-3' %>
+                            <div class="col-md-9"><%= @reserve.end_ymd.strftime("%Y年%m月%d日") %></div>
+                        </div>
+                    </div>
+                    <div class="update-content">
+                        <div class="row">
+                            <%= f.label :total_amount, "価格", class: 'col-md-3' %>
+                            <div class="col-md-9"><%= @reserve.total_amount %></div>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

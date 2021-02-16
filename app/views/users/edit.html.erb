@@ -1,0 +1,46 @@
+<%= stylesheet_link_tag 'users' %>
+
+<div class="container device">
+    <div class="device_frame">
+        <h2 class="mb-3">アカウント編集</h2>
+        <div class="device_inner">
+            <%= form_with(url: "/users/update_password/#{@user.id}", local: true) do |f| %>
+            <% @user.errors.full_messages.each do |message| %>
+              <div class="form-error">
+                <%= message %>
+              </div>
+            <% end %>
+                <div class="field">
+                    <div class="form-group">
+                        <label for="email">メールアドレス </label>
+                        <%= f.email_field :email ,:placeholder =>"メールアドレスを入力してください ",class: 'form-control',value: @user.email%>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="form-group">
+                        <label for="password">現在のパスワード </label>
+                        <%= f.password_field :current_password ,class: 'form-control'%>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="form-group">
+                        <label for="password">変更後のパスワード</label>
+                        <%= f.password_field :new_password ,class: 'form-control'%>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="form-group">
+                        <label for="password">変更後のパスワード(確認用)</label>
+                        <%= f.password_field :new_password_confirmation ,class: 'form-control'%>
+                    </div>
+                </div>
+                <div class="actions">
+                    <%= f.submit "更新",class: 'form-control btn-primary my-4'%>
+                </div>
+                <div class="actions">
+                    <a class="form-control btn-outline-secondary btn" href="/users/account/<%=@user.id%>">戻る</a>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

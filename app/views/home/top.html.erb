@@ -1,0 +1,38 @@
+<%= stylesheet_link_tag 'home' %>
+
+<div class="top-wrapper">
+  <div class="bg-slider">
+    <h1 class="bg-slider__title">まだ体験をしたことない旅をしよう</h1>
+  </div>
+</div>
+
+<div class="area-wrapper">
+  <h2>人気エリア</h2>
+  <div class="row">
+    <div class="favorite-area">
+      <a href="/rooms?area=東京&keyword=">
+        <%= image_tag('tokyo.jpg', class:'area', :size =>'230x360') %>
+        <p>東京</p>
+      </a>
+    </div>
+    <div class="favorite-area">
+      <a href="/rooms?area=横浜&keyword=">
+      <%= image_tag('yokohama.jpg', class:'area', :size =>'230x360') %>
+      <p>横浜</p>
+      </a>
+    </div>
+    <div class="favorite-area">
+      <a href="/rooms?area=京都&keyword=">
+        <%= image_tag('kyoto.jpg', class:'area', :size =>'230x360') %>
+        <p>京都</p>
+      </a>
+    </div>
+    <div class="favorite-area">
+      <a href="/rooms?area=沖縄&keyword=">
+        <%= image_tag('okinawa.jpg', class:'area', :size =>'230x360') %>
+        <p>沖縄</p>
+      </a>
+    </div>  
+  </div>
+</div>
+
