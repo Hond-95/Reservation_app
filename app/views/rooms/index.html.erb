@@ -1,0 +1,31 @@
+<%= stylesheet_link_tag 'rooms' %>
+
+<div class="room">
+  <h2>検索結果: <%= @rooms.count %> 件</h2>
+  <div class="row">
+  <% @rooms.each do |room| %>
+      <div class="col-sm-6">
+        <div class="room-frame-inner">
+          <a href="/rooms/<%= room.id %>">
+            <div class="room-image-out">
+              <% if room.room_image? %>
+                <%= image_tag(room.room_image.url,class:'room-image', :size =>'320x480') %>
+              <% else %>
+                <%= image_tag('/images/default_room.jpg', class:'room-image', :size =>'320x480') %>
+              <% end %>
+            </div>
+            <div class="room-profile">
+              <p class="room-profile-name"><%= room.name %></p>
+              <p class="room-profile-city"><%= room.area %></p>
+              <p class="room-profile-price">¥<%= room.fee %></p>
+            </div>
+          </a>
+        </div>
+      </div>
+  <% end %>
+  </div>
+</div>
+
+
+
+

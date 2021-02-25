@@ -1,0 +1,193 @@
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.device{
+  padding-top: 80px;
+  font-size: 16px; 
+}
+
+.device p {
+  font-size: 16px;
+}
+
+.device_frame {
+  max-width: 600px;
+  text-align: center;
+  padding: 24px;
+  margin: 0px auto;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: rgba(21, 27, 38, 0.15) 0px 1px 3px 0px;
+}
+
+.mb-4, .my-4 {
+  margin-bottom: 1.5rem!important;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.authenticate-row {
+  margin-right: -5px;
+  margin-left: -5px;
+  text-align: center;
+}
+
+.authenticate-row input{
+  width: 300px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-lg-2 {
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+}
+
+.user-nav-pc {
+  height: 100vh;
+}
+
+.user-nav {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px 15px;
+} 
+
+.d-lg-block {
+  display: block!important;
+}
+
+.active {
+  border-right: 3px solid #4a90e2;
+}
+
+.row a {
+  text-decoration: none;
+}
+
+.col-md-10 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.user-view {
+  background-color: #F6F8F9;
+  border-left: 2px solid #e2e2e2;
+}
+
+.user-view-box {
+  max-width: 880px;
+  background-color: #fff;
+  border: 1px solid #eaedef;
+  margin: 30px auto;
+}
+
+.update-content {
+  border-bottom: 1px solid #eaedef;
+  padding: 20px;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.update-content label {
+  font-weight: bold;
+}
+
+.col-md-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-md-9 {
+  max-width: 75%;
+}
+
+.mx-3 {
+  margin-left: 1rem!important;
+}
+
+.btn-primary {
+  color: #fff;
+  border-color: #007bff;
+  background-color: #4a90e2 !important;
+}
+
+ul {
+  list-style: none;
+}
+
+.offset-md-3 {
+  margin-left: 25%;
+}
+
+.col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.icon-box {
+  text-align: center;
+}
+
+.host-icon {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.required-a::after {
+  content: "必須";
+  color: #fff;
+  background-color: #ff0000a8;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 4px;
+  margin: 0 5px;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem!important;
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+.mb-3 {
+  margin-bottom: 1rem!important;
+}
+
+.device_inner {
+  width: 360px;
+  margin: 0px auto;
+}
+
+div.field {
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.btn-outline-secondary {
+  border-color: #6c757d;
+}
+
+.form-error {
+  color: red;
+} 

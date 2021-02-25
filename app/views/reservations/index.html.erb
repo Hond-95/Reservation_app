@@ -1,0 +1,41 @@
+<%= stylesheet_link_tag 'reservations' %>
+
+<div class="reservations">
+    <h4 class="pb-4">予約済みルーム一覧</h4>
+    <table>
+        <thead>
+            <tr align="center">
+                <th>ルーム画像</th>
+                <th>ルーム名</th>
+                <th>ルーム紹介</th>
+                <th>合計料金</th>
+                <th>開始日</th>
+                <th>終了日</th>
+                <th>予約確定日時</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @reservations.each do |reservation| %>
+                <tr>
+                    <td>
+                        <a href="/rooms/<%= reservation.room.id %>">
+                            <% if reservation.room.room_image? %>
+                                <%= image_tag(reservation.room.room_image.url,class:'reservations-image', :size =>'320x480') %>
+                            <% else %>
+                                <%= image_tag('/images/default_room.jpg', class:'reservations-image', :size =>'320x480') %>
+                            <% end %>
+                        </a>
+                    </td>
+                    <td class="posts-name">
+                        <a href="/rooms/<%= reservation.room.id %>"><%= reservation.room.name %></a>
+                    </td>
+                    <td class="posts-content"><%= reservation.room.introduction %></td>
+                    <td class="price-icon"><%= reservation.total_amount %></td>
+                    <td><%= reservation.start_ymd.strftime("%Y年%m月%d日") %></td>
+                    <td><%= reservation.end_ymd.strftime("%Y年%m月%d日") %></td>
+                    <td><%= reservation.created_at.strftime("%Y年%m月%d日 %H時%M分") %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>

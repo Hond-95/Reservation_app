@@ -1,0 +1,219 @@
+.container {
+    max-width: 1140px;
+}
+
+.reservations-new {
+    padding: 90px 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.offset-3 {
+    margin-left: 25%;
+}
+
+.reservations-new-nav {
+    padding: 20px;
+    border: 1px solid #eaedef;
+}
+
+.reservations-new-check-content {
+    border-bottom: 1px solid #eaedef;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.price-icon::before {
+    content: "￥";
+    padding-right: 3px;
+}
+
+h5 {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+.reservations-new-date-select {
+    padding: 15px 0;
+}
+
+label {
+    margin-bottom: .5rem;
+}
+
+.form-control[readonly] {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem!important;
+}
+
+.btn-primary {
+    background-color: #4a90e2 !important;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: .375rem .75rem;
+    
+}
+
+.my-3 {
+    margin-bottom: 1rem!important;
+    margin-top: 1rem!important;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.user {
+    width: 100%;
+}
+
+.user-view {
+    background-color: #F6F8F9;
+    border-left: 2px solid #e2e2e2;
+}
+
+.col-md-12 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.user-view-box {
+    max-width: 880px;
+    background-color: #fff;
+    border: 1px solid #eaedef;
+    margin: 30px auto;
+}
+
+.update-content {
+    border-bottom: 1px solid #eaedef;
+    padding: 20px;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-md-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.pb-4 {
+    padding-bottom: 1.5rem!important;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.reservations {
+    max-width: 100vw;
+    padding: 100px 60px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.reservations-image {
+    width: 240px;
+    height: 140px;
+    object-fit: cover;
+}
+
+.reservations table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.reservations table tbody tr{
+    border-top: 1px solid #eaedef;
+    border-bottom: 1px solid #eaedef;
+}
+
+.reservations table thead th {
+    padding: 8px 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.reservations table tbody td {
+    padding: 10px;
+}
+
+.reservations table tbody a {
+    color: #4a90e2;
+    text-decoration: underline;
+}
+
+.price-icon::before {
+    content: "￥";
+    padding-right: 3px;
+}
+
+.reservations table {
+    min-width: 500px;
+    width: 95%;
+}

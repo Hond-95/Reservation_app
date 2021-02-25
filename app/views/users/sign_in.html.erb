@@ -1,0 +1,23 @@
+<%= stylesheet_link_tag 'users' %>
+
+<div class="container device">
+  <div class="device_frame">
+    <p class="">ログイン</p>
+    <div class="device_inner">
+      <%= form_with url: "/login", local: true do |f| %>
+        <div class="field authenticate-row">
+          <%= f.email_field :email ,:placeholder =>"メールアドレス "%>
+        </div>
+        <div class="field authenticate-row">
+          <%= f.password_field :password ,:placeholder =>"パスワード"%>
+        </div>
+        <div class="field authenticate-row">
+          <%= f.submit "ログイン" %>
+        </div>
+      <% end %>
+      <div class="field authenticate-row">
+        <%= link_to "新規アカウント作成", "/users/sign_up" %>
+      </div>
+    </div>
+  </div>
+</div>

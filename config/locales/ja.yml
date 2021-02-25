@@ -1,0 +1,22 @@
+ja:
+  activerecord:
+    # 追加
+    attributes:
+      room:
+        name: ルーム名
+        introduction: 紹介文
+        fee: 料金
+        address: 住所
+        room_image: ルーム画像
+
+ja:
+  activerecord:
+    # 追加
+    attributes:
+      user:
+        name: ユーザ名
+        email: メールアドレス
+        password: パスワード
+        profile: 自己紹介
+        password: パスワード
+        password_confirmation: 確認用パスワード
